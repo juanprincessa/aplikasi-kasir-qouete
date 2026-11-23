@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Qouete - SMK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header & Logo SMK Eksternal -->
+        <header class="header">
+            <div class="logo-smk">
+                <img src="logo-smkn1blitar.jpeg" alt="Logo SMK">
+            </div>
+            <div class="title-group">
+                <h1>Kasir Qouete</h1>
+                <p>PPLG - Aplikasi Kasir Sederhana</p>
+            </div>
+        </header>
+
+        <!-- Form Input -->
+        <form id="kasirForm" class="kasir-form">
+            <div class="form-group">
+                <label for="namaPembeli">Nama Pembeli</label>
+                <input type="text" id="namaPembeli" placeholder="Contoh: Andi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="namaBarang">Nama Barang</label>
+                <input type="text" id="namaBarang" placeholder="Contoh: Keyboard" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="hargaBarang">Harga Barang (Rp)</label>
+                    <input type="number" id="hargaBarang" placeholder="300000" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlahBarang">Jumlah Barang</label>
+                    <input type="number" id="jumlahBarang" placeholder="1" min="1" required>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" id="btnHitung" class="btn-hitung">Hitung</button>
+                <button type="reset" id="btnReset" class="btn-reset">Reset</button>
+            </div>
+        </form>
+
+        <!-- Output Struk Pembayaran -->
+        <div id="hasilContainer" class="hasil-box hidden">
+            <h2>Struk Pembayaran</h2>
+            <div class="struk-item">
+                <span>Nama Pembeli</span>
+                <strong id="outPembeli">-</strong>
+            </div>
+            <div class="struk-item">
+                <span>Barang</span>
+                <strong id="outBarang">-</strong>
+            </div>
+            <div class="struk-item">
+                <span>Subtotal</span>
+                <strong id="outSubtotal">Rp0</strong>
+            </div>
+            <div class="struk-item diskon-row">
+                <span>Diskon <small id="infoDiskon"></small></span>
+                <strong id="outDiskon">Rp0</strong>
+            </div>
+            <hr class="garis-putus">
+            <div class="struk-item total-row">
+                <span>Total Bayar</span>
+                <strong id="outTotal">Rp0</strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

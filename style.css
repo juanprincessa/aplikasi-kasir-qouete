@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #4a044e;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(219, 39, 119, 0.15);
+    overflow: hidden;
+    border: 2px solid #f9a8d4;
+}
+
+/* Header & Logo */
+.header {
+    background: linear-gradient(135deg, #db2777, #f472b6);
+    color: #ffffff;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-smk {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo-smk img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.title-group h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.title-group p {
+    font-size: 0.85rem;
+    color: #fce7f3;
+    margin-top: 2px;
+}
+
+/* Form Input */
+.kasir-form {
+    padding: 24px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #9d174d;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #f9a8d4;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background-color: #fff5f7;
+    color: #831843;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #db2777;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.15);
+}
+
+/* Tombol */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-hitung {
+    flex: 2;
+    background-color: #db2777;
+    color: #ffffff;
+}
+
+.btn-hitung:hover {
+    background-color: #be185d;
+}
+
+.btn-reset {
+    flex: 1;
+    background-color: #fce7f3;
+    color: #be185d;
+}
+
+.btn-reset:hover {
+    background-color: #fbcfe8;
+}
+
+/* Output Struk */
+.hasil-box {
+    background-color: #fdf2f8;
+    margin: 0 24px 24px;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1.5px dashed #f472b6;
+}
+
+.hasil-box.hidden {
+    display: none;
+}
+
+.hasil-box h2 {
+    font-size: 1.1rem;
+    color: #be185d;
+    text-align: center;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.struk-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #831843;
+}
+
+.diskon-row strong {
+    color: #059669;
+}
+
+.garis-putus {
+    border: none;
+    border-top: 1.5px dashed #f472b6;
+    margin: 12px 0;
+}
+
+.total-row {
+    font-size: 1.15rem;
+    color: #be185d;
+    margin-bottom: 0;
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
